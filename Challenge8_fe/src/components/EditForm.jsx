@@ -100,12 +100,12 @@ export default function Form({ onRefresh }) {
           </tr>
           <tr>
             <td>
-              <button className="btn btn-success btn-sm" type="submit">
+              <button type="submit">
                 Save New Data
               </button>
             </td>
             <td>
-              <button className="btn btn-danger btn-sm" type="reset">
+              <button type="reset">
                 Reset
               </button>
             </td>

@@ -5,7 +5,8 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import './table.css';
 
 export default function Table({ refresh, onRefresh }) {
-  const refId = useRef();
+
+  
   const [players, setPlayers] = useState([]);
 
   const loadPlayersFromApi = () => {
@@ -14,6 +15,7 @@ export default function Table({ refresh, onRefresh }) {
       .then((data) => {
         setPlayers([]);
         setPlayers(data.data.data);
+        console.log(data.data.data)
       })
       .catch(() => {
         alert("something wrong");
@@ -56,7 +58,6 @@ export default function Table({ refresh, onRefresh }) {
   return (
     <>
       <button
-        className="btn btn-info btn-sm"
         onClick={() => loadPlayersFromApi()}
       >
         Load

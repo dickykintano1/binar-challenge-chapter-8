@@ -22,6 +22,7 @@ function App() {
       <EditForm onRefresh={handleOnRefresh} />
       <br />
       <br />
+
       <div className='table-container'>
         <Table refresh={refresh} />
       </div>
